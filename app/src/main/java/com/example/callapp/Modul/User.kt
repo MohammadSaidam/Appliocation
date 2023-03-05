@@ -1,5 +1,12 @@
 package com.example.callapp.Modul
 
-data class User(val adress:String? = null ,
-                val number:String? = null ,
-                val name:String? = null)
+class Users(val Address:String? = null ,
+                val Number:String? = null ,
+                val Name:String? = null){
+    companion object{
+        val FIRESTORE_COLLECTION_NAME = "Users"
+    }
+}
+
+
+

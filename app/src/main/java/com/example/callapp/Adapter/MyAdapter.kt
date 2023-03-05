@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.callapp.Modul.User
+import com.example.callapp.Modul.Users
 import com.example.callapp.R
 import com.example.callapp.databinding.ActivityAddBinding
 
-class MyAdapter(private val userList: ArrayList<User>) :
+class MyAdapter(private val userList: ArrayList<Users>) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     // View Holder Class
@@ -34,9 +34,9 @@ class MyAdapter(private val userList: ArrayList<User>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
-        holder.userName.text = userList[position].name
-        holder.mobileNumber.text = userList[position].number
-        holder.address.text = userList[position].adress
+        holder.userName.text = userList[position].Name
+        holder.mobileNumber.text = userList[position].Number
+        holder.address.text = userList[position].Address
 
 
     }

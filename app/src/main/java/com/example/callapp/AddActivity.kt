@@ -30,12 +30,22 @@ class AddActivity : AppCompatActivity() {
             name = binding.nameFeild.text.toString()
             number = binding.numberFeild.text.toString()
             address = binding.addressFeild.text.toString()
-            this.addFireStore()
 
+            this.validationTextFeild()
+        }
+
+
+    }
+
+    fun validationTextFeild() {
+
+        if (this.name.isNotEmpty() && number.isNotEmpty() && address.isNotEmpty()) {
+            this.addFireStore()
+            Toast.makeText(this, "Addedd Sucessfully", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this, "Addedd Sucessfully", Toast.LENGTH_SHORT).show()
-
+        } else {
+            Toast.makeText(this, "Please Fill Felids", Toast.LENGTH_SHORT).show()
         }
 
 
@@ -53,7 +63,7 @@ class AddActivity : AppCompatActivity() {
         db.collection("Users")
             .add(Users)
             .addOnSuccessListener { user ->
-               // Log.d(TAG, "DocumentSnapshot added with ID: ${user.id}")
+                Log.d(TAG, "DocumentSnapshot added with ID: ${user.id}")
             }
             .addOnFailureListener { e ->
                 Log.w(TAG, "Error adding document", e)

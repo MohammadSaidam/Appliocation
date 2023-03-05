@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:id="@+id/cardView"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="8dp"
@@ -29,10 +30,10 @@
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="284dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mohammed"
-                android:textColor="@color/black"
+                android:textColor="#AB000000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -57,11 +58,11 @@
 
             <TextView
                 android:id="@+id/tvMobileNumber"
-                android:layout_width="258dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0592152355"
 
-                android:textColor="@color/black"
+                android:textColor="#AB000000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -76,7 +77,7 @@
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address"
+                android:text="Address:"
 
                 android:textSize="26dp"
                 android:textStyle="bold"
@@ -84,18 +85,19 @@
 
             <TextView
                 android:id="@+id/tvaddress"
-                android:layout_width="266dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="gaza"
 
-                android:textColor="@color/black"
+                android:textColor="#AB000000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
 
-    </LinearLayout>
 
+
+    </LinearLayout>
 
 
 </androidx.cardview.widget.CardView>
